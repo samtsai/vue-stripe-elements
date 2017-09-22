@@ -5,8 +5,8 @@
     :stripe='stripe'
     :value='value'
     :options='options'
-    @blur='$emit("blur")'
-    @focus='$emit("focus")'
+    @blur='$emit("blur", $event)'
+    @focus='$emit("focus", $event)'
     @change='$emit("change", $event)'
   />
 </template>
@@ -19,8 +19,8 @@ export default {
   props,
   components: { StripeElement },
   methods: {
-    blur () { this.$refs.element.blur() },
-    focus () { this.$refs.element.focus() },
+    blur (event) { this.$refs.element.blur(event) },
+    focus (event) { this.$refs.element.focus(event) },
     update (options) { this.$refs.element.update(options) }
   }
 }

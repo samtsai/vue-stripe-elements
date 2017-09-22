@@ -11,8 +11,8 @@ export default {
 
   beforeMount () {
     this._element = create(this.type, this.stripe, this.options)
-    this._element.on('blur', event => this.$emit('blur'))
-    this._element.on('focus', event => this.$emit('focus'))
+    this._element.on('blur', event => this.$emit('blur', event))
+    this._element.on('focus', event => this.$emit('focus', event))
     this._element.on('change', event => this.$emit('change', event))
   },
 
