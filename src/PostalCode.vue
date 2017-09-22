@@ -4,10 +4,10 @@
     :stripe='stripe'
     :value='value'
     :options='options'
-    @blur='$emit("blur")'
-    @focus='$emit("focus")'
-    @empty='$emit("empty")'
-    @complete='$emit("complete")'
+    @blur='$emit("blur", $event)'
+    @focus='$emit("focus", $event)'
+    @empty='$emit("empty", $event)'
+    @complete='$emit("complete", $event)'
     @brand='$emit("brand", $event)'
     @error='$emit("error", $event)'
     @value='$emit("value", $event)'
@@ -21,10 +21,10 @@ import StripeElement from './StripeElement'
 export default {
   props,
   components: { StripeElement },
-  methods: {
-    blur () { this.$refs.element.blur() },
-    focus () { this.$refs.element.focus() },
-    update (options) { this.$refs.element.update(options) }
-  }
+  // methods: {
+  //   blur () { this.$refs.element.blur() },
+  //   focus () { this.$refs.element.focus() },
+  //   update (options) { this.$refs.element.update(options) }
+  // }
 }
 </script>

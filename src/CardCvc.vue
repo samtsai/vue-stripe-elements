@@ -18,10 +18,10 @@ import StripeElement from './StripeElement'
 export default {
   props,
   components: { StripeElement },
-  methods: {
-    blur (event) { this.$refs.element.blur(event) },
-    focus (event) { this.$refs.element.focus(event) },
-    update (options) { this.$refs.element.update(options) }
-  }
+  // methods: {
+  //   blur (event) { this.$refs.element.blur(event) },
+  //   focus (event) { this.$refs.element.focus(event) },
+  //   update (options) { this.$refs.element.update(options) }
+  // }
 }
 </script>
